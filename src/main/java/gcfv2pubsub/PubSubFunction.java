@@ -20,7 +20,7 @@ public class PubSubFunction implements CloudEventsFunction {
   private static final Logger logger = Logger.getLogger(PubSubFunction.class.getName());
   private final String mailgunApiKey = System.getenv("api_key");
   private final String mailgunDomainName = "csye6225cloud.me";
-  private final String verificationBaseUrl = "http://csye6225cloud.me:8080/v1/verify/";
+  private final String verificationBaseUrl = System.getenv("verificationBaseUrl");
   private final String dblink = System.getenv("dbUrl");
   private final String dbname = System.getenv("dbName");
   private final String dbPass = System.getenv("dbPass");// Base URL for verification endpoint
